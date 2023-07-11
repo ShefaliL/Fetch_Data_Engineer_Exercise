@@ -1,8 +1,7 @@
-For this assignment an ounce of communication and organization is worth a pound of execution.
 
-Following are the answers to the questions below: 
+ ## Following are the answers to the questions below: 
 
-How would you deploy this application in production?
+## How would you deploy this application in production?
 
 Solution : 
 To deploy this application in production, we can containerize the application, source.py using Docker. 
@@ -13,7 +12,7 @@ This approach allows us to securely store sensitive information separate from th
 By leveraging Docker and environment variables, we can streamline the deployment process and ensure smooth operation of our application in production.
 
 
-What other components would you want to add to make this production ready?
+## What other components would you want to add to make this production ready?
 
 Solution: 
 ChatGPT
@@ -24,7 +23,7 @@ Implementing a CI/CD pipeline not only automates the build and deployment proces
 It ensures that only thoroughly tested and validated code is pushed to the production environment, thereby reducing the risk of potential issues and ensuring a reliable application in production.
  
 
-How can this application scale with a growing dataset.
+## How can this application scale with a growing dataset?
 
 Solution:
 To scale this application with a growing dataset, a recommended approach is to implement load balancing by creating multiple instances of the application and putting them behind a load balancer. 
@@ -34,24 +33,24 @@ Another approach is to use a Kubernetes cluster, which provides a scalable and f
 With Kubernetes, the application can be dynamically scaled up or down based on demand, allowing it to handle larger datasets efficiently while ensuring high availability and resource optimization.
 
 
-How can PII be recovered later on?
+## How can PII be recovered later on?
 
 Solution: 
-To enable PII (Personally Identifiable Information) recovery later on, there are a few strategies that can be implemented. 
+To enable PII (Personally Identifiable Information) recovery, later on, there are a few strategies that can be implemented. 
 One approach is to log the PII being inserted into the database, either in a separate log file or in another column specifically designed to store the original PII.
 By preserving the original PII, it can be recovered when needed for legitimate purposes. Another method is to introduce original columns instead of directly selecting the PII during queries.
-This allows for the separation of sensitive information from the publicly accessible data. 
+This allows for the separation of sensitive information from publicly accessible data. 
 Additionally, database views can be created to expose only the necessary columns while masking sensitive information.
 For instance, functions like SUBSTRING can be used to partially mask email addresses, or the REPLACE function can be utilized to replace certain characters in a string. 
 By implementing these measures, PII can be protected while still allowing for its recovery when necessary.
 
 
-What are the assumptions you made?
+## What are the assumptions you made?
 
 Solution:
 
 Here are the following assumptions which I have made:
-- It can be observed that the "app_version" column's data is in the format "2.3.0" and has a datatype defined as "INT". So, I decided that datatype should be changed INT to VARCHAR to accommodate the app_version .
+- It can be observed that the "app_version" column's data is in the format "2.3.0" and has a datatype defined as "INT". So, I decided that the datatype should be changed from "INT" to "VARCHAR" to accommodate the app_version.
 - The data being inserted into the database is batched, meaning that multiple records are inserted at once rather than being sent sequentially. This assumption is made based on the statement that it is better to insert data in a batch manner when dealing with large datasets.
-- The last three digits of the "ip" address and the last four digits of the "device_id" are assumed to be unique in every case. Therefore, these specific digits have not been masked, likely to maintain the uniqueness and integrity of the data.
+- The last three digits of the "IP" address and the last four digits of the "device_id" are assumed to be unique in every case. Therefore, these specific digits have not been masked, likely to maintain the uniqueness and integrity of the data.
 - These assumptions are made to provide context and make logical decisions based on the information provided.
