@@ -2,7 +2,7 @@
 
 This readme provides instructions for setting up and testing the  Fetch Rewards - Data Engineering Takehome application locally. 
 
-#### Prerequisites:
+## Prerequisites:
 
 Before proceeding, make sure you have the following:
 
@@ -29,11 +29,11 @@ services:
 ```
 
 PostgreSQL Credentials
-The PostgreSQL database in the test environment can be accessed using the following credentials:
+The PostgreSQL database in the test environment can be accessed using the following credentials:  
 
-Username: postgres
-Password: postgres
-Testing Local Access
+Username: postgres  
+Password: postgres  
+Testing Local Access  
 
 To test local access and ensure everything is set up correctly, follow these steps:
 
@@ -56,3 +56,12 @@ $ postgres=# select * from user_logins;
 ```
 
 This completes the setup and testing process for the Data Takehome application in the local environment.
+
+## Running the script:
+
+Installing dependencies
+import boto3
+import psycopg2
+
+Python Script:
+source.py
