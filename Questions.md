@@ -1,18 +1,18 @@
 
- # Following are the answers to the questions below: 
+ ## Following are the answers to the questions below: 
 
-## How would you deploy this application in production?
+### How would you deploy this application in production?
 
 Solution : 
 To deploy this application in production, we can containerize the application, source.py using Docker. 
-By containerizing the application,we can ensure consistent and reliable deployment across different environments.
+By containerizing the application, we can ensure consistent and reliable deployment across different environments.
 The Docker container will encapsulate the application and its dependencies, making it easier to manage and deploy.
 Moreover, we can improve security and flexibility by setting the credentials for the PostgreSQL database and SQS queue through environment variables. 
 This approach allows us to securely store sensitive information separate from the application code and easily configure them based on the deployment environment.
-By leveraging Docker and environment variables, we can streamline the deployment process and ensure smooth operation of our application in production.
+By leveraging Docker and environment variables, we can streamline the deployment process and ensure the smooth operation of our application in production.
 
 
-## What other components would you want to add to make this production ready?
+### What other components would you want to add to make this production ready?
 
 Solution: 
 ChatGPT
@@ -23,7 +23,7 @@ Implementing a CI/CD pipeline not only automates the build and deployment proces
 It ensures that only thoroughly tested and validated code is pushed to the production environment, thereby reducing the risk of potential issues and ensuring a reliable application in production.
  
 
-## How can this application scale with a growing dataset?
+### How can this application scale with a growing dataset?
 
 Solution:
 To scale this application with a growing dataset, a recommended approach is to implement load balancing by creating multiple instances of the application and putting them behind a load balancer. 
@@ -33,7 +33,7 @@ Another approach is to use a Kubernetes cluster, which provides a scalable and f
 With Kubernetes, the application can be dynamically scaled up or down based on demand, allowing it to handle larger datasets efficiently while ensuring high availability and resource optimization.
 
 
-## How can PII be recovered later on?
+### How can PII be recovered later on?
 
 Solution: 
 To enable PII (Personally Identifiable Information) recovery, later on, there are a few strategies that can be implemented. 
@@ -45,7 +45,7 @@ For instance, functions like SUBSTRING can be used to partially mask email addre
 By implementing these measures, PII can be protected while still allowing for its recovery when necessary.
 
 
-## What are the assumptions you made?
+### What are the assumptions you made?
 
 Solution:
 
