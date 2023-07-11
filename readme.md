@@ -38,18 +38,20 @@ Testing Local Access
 To test local access and ensure everything is set up correctly, follow these steps:
 
 1.Read a message from the queue using AWS CLI Local:
-awslocal sqs receive-message --queue-url http://localhost:4566/000000000000/login-queue
+```bash
+$ awslocal sqs receive-message --queue-url http://localhost:4566/000000000000/login-queue
+```
 
 2.Connect to the PostgreSQL database and verify that the table is created:
 
 Open a terminal and run the following command and enter the password once prompted:
-```
+```bash
 $ psql -d postgres -U postgres -p 5432 -h localhost -W
 Password:
 ```
 
 Once connected to the PostgreSQL database, execute the following SQL query:
-```
+```bash
 $ postgres=# select * from user_logins;
 ```
 
