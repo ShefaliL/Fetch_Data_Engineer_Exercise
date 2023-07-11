@@ -1,4 +1,4 @@
-Fetch Rewards Data Engineering Take Home
+## Fetch Rewards Data Engineering Take Home
 
 This readme provides instructions for setting up and testing the  Fetch Rewards - Data Engineering Takehome application locally. 
 
