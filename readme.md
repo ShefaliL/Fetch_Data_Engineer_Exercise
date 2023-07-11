@@ -60,13 +60,11 @@ $ postgres=# select * from user_logins;
 To run the Data Takehome script, ensure that the required dependencies are installed. The script relies on the following Python packages: boto3 and psycopg2.  
 
 To install the dependencies, open a terminal and execute the following commands:  
-
-shell  
-Copy code  
+ 
 pip install boto3 psycopg2  
-Once the dependencies are installed, you can run the Python script source.py. Ensure that you are in the correct directory where the script is located, and execute the script using the following command:  
 
-shell  
-Copy code  
+Once the dependencies are installed, you can run the Python script source.py. Ensure that you are in the correct directory where the script is located, and execute the script using the following command:  
+ 
 python source.py  
+
 Make sure the test environment (PostgreSQL and Localstack) is running before executing the script.  
